@@ -1,0 +1,78 @@
+<form class="form-horizontal" id="registration" method='post' ng-submit="register(customer)">
+	<fieldset>
+		<legend>
+			Register User
+			
+		</legend>
+		
+		<span class="alert alert-success" ng-show="successMessage" style="padding: 8px">
+			{{successMessage}}
+		</span>
+		<span class="alert alert-danger" ng-show="errorMessage" style="padding: 8px">
+			{{errorMessage}}
+		</span>
+		
+		<div class="control-group">
+			<label class="control-label">Name</label>
+			<div class="controls">
+				<input type="text" id="name" placeholder="Name" ng-model="customer.name" required>
+			</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label">Email</label>
+			<div class="controls">
+				<input type="email" placeholder="Email" ng-model="customer.email" required>
+			</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label">Address Line 1</label>
+			<div class="controls">
+				<input type="text" id="addressLine1" placeholder="Address Line 1" ng-model="customer.addressLine1" required>
+			</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label">Address Line 2</label>
+			<div class="controls">
+				<input type="text" id="addressLine2" placeholder="Address Line 2" ng-model="customer.addressLine2">
+			</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label">Phone</label>
+			<div class="controls">
+				<input type="text" placeholder="Phone" ng-model="customer.phone" required>
+			</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label">Gender</label>
+			<div class="controls">
+				<input type="text" placeholder="gender" ng-model="customer.gender" required>
+			</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label">Password</label>
+			<div class="controls">
+				<input type="Password" placeholder="Password" ng-model="customer.password" required>
+			</div>
+		</div>
+		
+		<!-- <div class="control-group">
+			<label class="control-label">Confirm Password</label>
+			<div class="controls">
+				<input type="Password" placeholder="Password" ng-model="confirmPassword" required>
+			</div>
+		</div> -->
+		
+		<div class="control-group">
+			<label class="control-label"></label>
+			<div class="controls">
+				<button type="submit" class="btn btn-success">Register</button>
+			</div>
+		</div>
+	</fieldset>
+</form>

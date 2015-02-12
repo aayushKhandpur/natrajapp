@@ -1,0 +1,29 @@
+<form class="form-horizontal" id="loginForm" method="post" ng-submit="login(customer)">
+	<fieldset>
+		<legend> Login </legend>
+		<span class="alert alert-danger" ng-show="errorMessage" style="padding: 8px">
+			{{errorMessage}}
+		</span>
+		
+		<div class="control-group">
+			<label class="control-label"> Username </label>
+			<div class="controls">
+				<input type="email" placeholder="Email" id="email" ng-model="customer.email" required>
+			</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label"> Password </label>
+			<div class="controls">
+				<input type="Password" placeholder="Password" ng-model="customer.password" required>
+			</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label"></label>
+			<div class="controls">
+				<button type="submit" class="btn btn-success">Login</button>
+			</div>
+		</div>
+	</fieldset>
+</form>
